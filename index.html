@@ -17,52 +17,225 @@
       --radius:12px;
       color-scheme: dark;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:#e6eef6;background:linear-gradient(180deg,#071025 0%, #07172a 100%);}
-    a{color:var(--accent);text-decoration:none}
-    header{backdrop-filter: blur(6px);position:sticky;top:0;z-index:40;padding:14px 20px;background:linear-gradient(180deg, rgba(10,14,20,0.45), rgba(10,14,20,0.25));border-bottom:1px solid rgba(255,255,255,0.03)}
-    .container{max-width:var(--maxw);margin:28px auto;padding:0 20px}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#1e293b,#0ea5a5);display:flex;align-items:center;justify-content:center;font-weight:700;color:white}
-    .nav{margin-left:auto;display:flex;gap:12px;align-items:center}
-    .search{background:var(--glass);border:1px solid rgba(255,255,255,0.03);padding:8px 10px;border-radius:999px;width:220px}
+    *{
+      box-sizing:border-box
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:#e6eef6;
+      background:linear-gradient(180deg,#071025 0%, #07172a 100%);
+    }
+
+    a{
+      color:var(--accent);
+      text-decoration:none
+    }
+
+    header{
+      backdrop-filter: blur(6px);
+      position:sticky;
+      top:0;
+      z-index:40;
+      padding:14px 20px;
+      background:linear-gradient(180deg, rgba(10,14,20,0.45), rgba(10,14,20,0.25));
+      border-bottom:1px solid rgba(255,255,255,0.03)
+    }
+
+    .container{
+      max-width:var(--maxw);
+      margin:28px auto;
+      padding:0 20px
+    }
+
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center
+    }
+
+    .logo{
+      width:48px;
+      height:48px;
+      border-radius:10px;
+      background:linear-gradient(135deg,#1e293b,#0ea5a5);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:white
+    }
+
+    .nav{
+      margin-left:auto;
+      display:flex;
+      gap:12px;
+      align-items:center
+    }
+
+    .search{
+      background:var(--glass);
+      border:1px solid rgba(255,255,255,0.03);
+      padding:8px 10px;
+      border-radius:999px;
+      width:220px
+    }
 
     /* grid */
-    .grid{display:grid;grid-template-columns:1fr 320px;gap:24px}
-    @media (max-width:900px){.grid{grid-template-columns:1fr}.nav{display:none}.search{width:140px}}
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 320px;
+      gap:24px
+    }
+
+    @media (max-width:900px){
+      .grid{
+        grid-template-columns:1fr
+      }
+      .nav{
+        display:none
+      }
+      .search{
+        width:140px
+      }
+    }
 
     /* hero */
-    .hero{display:flex;gap:20px;align-items:center;padding:26px;border-radius:var(--radius);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
-    .hero .intro{flex:1}
-    .hero h1{margin:0;font-size:28px}
-    .sub{color:var(--muted);margin-top:8px}
-    .cta{margin-top:16px;display:flex;gap:10px}
-    .btn{padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.04);background:transparent;cursor:pointer}
-    .btn.primary{background:linear-gradient(90deg,#10b981,#06b6d4);color:#042017;border:none}
+    .hero{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      padding:26px;
+      border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.03)
+    }
+
+    .hero .intro{
+      flex:1
+    }
+
+    .hero h1{
+      margin:0;
+      font-size:28px
+    }
+
+    .sub{
+      color:var(--muted);
+      margin-top:8px
+    }
+
+    .cta{
+      margin-top:16px;
+      display:flex;
+      gap:10px
+    }
+
+    .btn{
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.04);
+      background:transparent;
+      cursor:pointer
+    }
+
+    .btn.primary{
+      background:linear-gradient(90deg,#10b981,#06b6d4);
+      color:#042017;
+      border:none
+    }
 
     /* posts */
-    .posts{margin-top:18px;display:flex;flex-direction:column;gap:14px}
-    .post{padding:16px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:8px}
-    .post .meta{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:13px}
-    .post h2{margin:0}
-    .excerpt{color:var(--muted);line-height:1.5}
+    .posts{
+      margin-top:18px;
+      display:flex;
+      flex-direction:column;
+      gap:14px
+    }
+
+    .post{
+      padding:16px;
+      border-radius:10px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+      border:1px solid rgba(255,255,255,0.03);
+      display:flex;
+      flex-direction:column;
+      gap:8px
+    }
+
+    .post .meta{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      color:var(--muted);
+      font-size:13px
+    }
+
+    .post h2{
+      margin:0
+    }
+    
+    .excerpt{
+      color:var(--muted);
+      line-height:1.5
+    }
 
     /* sidebar */
-    .card{padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
-    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .tag{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);font-size:13px}
+    .card{
+      padding:16px;
+      border-radius:12px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.03)
+    }
 
-    footer{margin-top:36px;color:var(--muted);padding:20px 0;text-align:center}
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:10px
+    }
+
+    .tag{
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.02);
+      font-size:13px
+    }
+
+    footer{
+      margin-top:36px;
+      color:var(--muted);
+      padding:20px 0;
+      text-align:center
+    }
 
     /* small helpers */
-    .muted{color:var(--muted)}
-    .divider{height:1px;background:rgba(255,255,255,0.02);margin:14px 0;border-radius:2px}
+    .muted{
+      color:var(--muted)
+    }
+    .divider{
+      height:1px;
+      background:rgba(255,255,255,0.02);
+      margin:14px 0;
+      border-radius:2px
+    }
 
     /* code blocks */
-    pre{background:#041021;padding:12px;border-radius:8px;overflow:auto;color:#cbe7ff}
+    pre{
+      background:#041021;
+      padding:12px;
+      border-radius:8px;
+      overflow:auto;
+      color:#cbe7ff
+    }
 
     /* nice focus states */
-    input:focus, button:focus{outline:2px solid rgba(110,231,183,0.12);outline-offset:2px}
+    input:focus, button:focus{
+      outline:2px solid rgba(110,231,183,0.12);
+      outline-offset:2px
+    }
   </style>
 </head>
 <body>
@@ -71,7 +244,7 @@
       <div class="brand">
         <div class="logo">M</div>
         <div>
-          <div style="font-weight:700">我的个人博客</div>
+          <div style="font-weight:700">Xsybnx的个人博客</div>
           <div class="muted" style="font-size:13px">记录学习、项目、生活点滴</div>
         </div>
       </div>
@@ -88,7 +261,7 @@
   <main class="container">
     <section class="hero">
       <div class="intro">
-        <h1>嗨，我是 <span style="color:var(--accent)">小明</span> — 开发者、旅行爱好者</h1>
+        <h1>嗨，我是 <span style="color:var(--accent)">Xsybnx</span> — 开发者、旅行爱好者</h1>
         <div class="sub">这里是我的个人空间：写写技术笔记、记记旅行见闻、分享项目经验。欢迎关注并留言交流。</div>
         <div class="cta">
           <button class="btn primary" onclick="subscribe()">订阅我</button>
@@ -122,12 +295,12 @@
       <aside>
         <div class="card">
           <h4 style="margin:0">关于我</h4>
-          <div class="muted" style="margin-top:8px">你好！我叫小明，喜欢写代码和旅行。这个博客用于记录我学习和项目中的心得。</div>
+          <div class="muted" style="margin-top:8px">你好！我叫Xsybnx，喜欢写代码和旅行。这个博客用于记录我学习和项目中的心得。</div>
           <div class="divider"></div>
           <div style="display:flex;justify-content:space-between;align-items:center">
             <div>
               <div style="font-weight:700">订阅</div>
-              <div class="muted" style="font-size:13px">获取最新更新（只是示例）</div>
+              <div class="muted" style="font-size:13px">获取最新更新 </div>
             </div>
             <button class="btn" onclick="subscribe()">订阅</button>
           </div>
@@ -160,7 +333,7 @@
     </div>
 
     <footer>
-      © <span id="year"></span> 小明 · Built with ❤️ · <a href="#contact">联系我</a>
+      © <span id="year"></span> Xsybnx · Built with ❤️ · <a href="#contact">联系我</a>
     </footer>
   </main>
 
